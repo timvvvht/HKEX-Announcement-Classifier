@@ -2,7 +2,13 @@
 
 HKEX Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEX).
 
-In this project, I scraped data of 6 types of announcements, namely (1) Trading Halt; (2) Notifiable Transactions; (3) Connected Transactions; (4) Announcement of Annual Results; (5) Notice of Annual General Meeting; and (6) Takeover Offers.
+In this project, I scraped data of 6 types of announcements, namely:
+(1) Trading Halt; 
+(2) Notifiable Transactions; 
+(3) Connected Transactions; 
+(4) Announcement of Annual Results; 
+(5) Notice of Annual General Meeting; and 
+(6) Takeover Offers.
 
 # Motivation 
 The ability to accurate identify categories of legal text data is an immensely useful building block for legaltech or quantitative trading applications. 

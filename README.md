@@ -54,7 +54,7 @@ Includes bi-gram analysis and average word count analysis across different types
 ![Image of MWC](/images/word_count_comparison.png)
 
 # Training a Recurrent Neural Network 
-I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can can be found <a href='HKEX_Announcement_Classifier.ipynb'>here</a>.
+I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can can be found <a href='HKEx_Announcement_Classifier.ipynb'>here</a>.
 
 The model architecture is as follows: 
 

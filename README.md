@@ -1,6 +1,6 @@
 # HKEx Announcement Classifier
 
-HKEx Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to ~93% validation accuracy to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEx).
+HKEx Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to ~93-94% validation accuracy to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEx).
 
 <img src="/images/prediction.png" width="600">
 
@@ -60,9 +60,9 @@ The model architecture is as follows:
 
 ![Image of Model](/images/model.png)
 
-Through fine-tuning hyperparameters of the model, I was able to improve on the initial training and validation accuracy of the model (72.3%, 60.0%) to（95.0%, 93.55%).
+Through fine-tuning hyperparameters of the model, I was able to improve on the initial training and validation accuracy of the model (72.3%, 60.0%) to（95.0%, 93.6%).
 
-The trained neural network was able to accurately classify 93.55% of announcements in the validation set and it was able to accurately identify new announcements on the HKEx that I passed into it, provided that the categories of such announcements were within the training data. 
+The trained neural network was able to accurately classify 93.6% of announcements in the validation set and it was able to accurately identify new announcements on the HKEx that I passed into it, provided that the categories of such announcements were within the training data. 
 
 # Improving the Model 
 Further improvements on the model would include more data from different jurisdictions, and from different types of legal documents, so as to create a more general and more accurate legal text classifier.

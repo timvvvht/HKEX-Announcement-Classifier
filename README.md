@@ -86,3 +86,7 @@ The trained neural network was able to accurately classify 93.6% of announcement
 # Improving the Model 
 Further improvements on the model would include more data from different jurisdictions, and from different types of legal documents, so as to create a more general and more accurate legal text classifier.
 
+# Application
+As someone working in the legal industry, a legal text classifier would be immensely helpful to my day-to-day workflow, saving significant amounts of time spent on manually filing different types of legal texts. This type of classifier can save both time and costs in legal due diligence for Initial Public Offerings on Stock Exchanges. 
+
+

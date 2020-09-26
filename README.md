@@ -2,7 +2,7 @@
 
 HKEx Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to ~93% validation accuracy to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEx).
 
-![Image of Prediction](/images/prediction.png)
+<img src="/images/prediction.png" width="600">
 
 In this project, I scraped data corresponding to 6 types of announcements, namely:
 

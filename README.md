@@ -1,6 +1,8 @@
-# HKEX Announcement Classifier
+# HKEx Announcement Classifier
 
-HKEX Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEX).
+HKEx Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to ~93% validation accuracy to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEx).
+
+![Image of Prediction](/images/prediction.png)
 
 In this project, I scraped data corresponding to 6 types of announcements, namely:
 
@@ -52,10 +54,13 @@ Includes bi-gram analysis and average word count analysis across different types
 ![Image of MWC](/images/word_count_comparison.png)
 
 # Training a Recurrent Neural Network 
-I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can can be found <a href='HKEX_Announcement_Classifer.ipynb'>here</a>.
+I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can can be found <a href='HKEX_Announcement_Classifier.ipynb'>here</a>.
 
 The model architecture is as follows: 
-[PICTURE]
+![Image of Model](/images/model.png)
 
-The trained neural network was able to accurately classify X% of announcements in the validation test. 
-Try it yourself <a href='HKEX_Announcement_Classifer.ipynb'>here</a>!
+The trained neural network was able to accurately classify 93.55% of announcements in the validation set and it was able to accurately identify new announcements on the HKEx, provided that the categories of such announcements were within the training data. 
+
+# Improving the Model 
+Further improvements on the model would include more data from different jurisdictions, and from different types of legal documents, so as to create a more general and more accurate legal text classifier.
+

@@ -57,9 +57,12 @@ Includes bi-gram analysis and average word count analysis across different types
 I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can can be found <a href='HKEX_Announcement_Classifier.ipynb'>here</a>.
 
 The model architecture is as follows: 
+
 ![Image of Model](/images/model.png)
 
-The trained neural network was able to accurately classify 93.55% of announcements in the validation set and it was able to accurately identify new announcements on the HKEx, provided that the categories of such announcements were within the training data. 
+Through fine-tuning hyperparameters of the model, I was able to improve on the initial training and validation accuracy of the model (72.3%, 60.0%) to（95.0%, 93.55%).
+
+The trained neural network was able to accurately classify 93.55% of announcements in the validation set and it was able to accurately identify new announcements on the HKEx that I passed into it, provided that the categories of such announcements were within the training data. 
 
 # Improving the Model 
 Further improvements on the model would include more data from different jurisdictions, and from different types of legal documents, so as to create a more general and more accurate legal text classifier.

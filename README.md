@@ -35,23 +35,39 @@ Includes bi-gram analysis and average word count analysis across different types
 **Bigrams for Announcements of Annual General Meetings:**
 ![Image of AGM Bigrams](/images/bigrams_agm.png)
 
+No surprise here, that the bigrams "general meeting" and "annual general" are the most frequent ones for this category.
+
 **Bigrams for Announcements of Annual Results:**
 ![Image of AR Bigrams](/images/bigrams_ar.png)
+
+Announcements of Annual Results is related to bigrams such as "31 december" or "year ended" as they signify the end of the year.
 
 **Bigrams for Announcements of Trading Halts:**
 ![Image of TH Bigrams](/images/bigrams_th.png)
 
+As for this type of announcement, the most common bigrams are words that are common across *any* types of announcement, which is an observation in line with the relative shorter length of Trading Halt announcements as we shall see below.
+
 **Bigrams for Announcements of Connected Transactions:**
 ![Image of CT Bigrams](/images/bigrams_cct.png)
+
+As we can see above, the bigram "chapter 14a" is the 5th most common bigram in the Connected Transactions dataset. Given my experience representing listed companies in Hong Kong legally, I am aware that the rules regarding connected transactions are provided in Chapter 14A of the Listing Rules of the Stock Exchange.
 
 **Bigrams for Announcements of Notifiable Transactions:**
 ![Image of NT Bigrams](/images/bigrams_nt.png)
 
+Notifiable transactions usually involve mergers and acquisitions, so seeing the bigram "target company" in 4th place is not too surprising. The bigrams "percentage ratios" and "applicable percentage" relate to the requirement for companies to publish this type of announcements only when the proposed transaction meets a certain percentage threshold of equity transfer in the transaction.
+
 **Bigrams for Announcements of Takeover Offers:**
 ![Image of TK Bigrams](/images/bigrams_tk.png)
 
+Takeover offers are governed by the Takeovers Code, so no surprise here.
+
 ## Analysis of Mean Word Count across Announcements
 ![Image of MWC](/images/word_count_comparison.png)
+
+Annual results occupy the number 1 spot in terms of length of announcement. This is due to the sheer amount of financial metrics to disclose as part of annual results.
+
+Connected Transactions and Notifiable Transactions have the two highest mean word counts after annual results. This is due to these types of announcements often having to disclose at length the background of entering into such transactions.
 
 # Training a Recurrent Neural Network 
 I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can can be found <a href='HKEx_Announcement_Classifier.ipynb'>here</a>.
@@ -61,6 +77,9 @@ The model architecture is as follows:
 ![Image of Model](/images/model.png)
 
 Through fine-tuning hyperparameters of the model, I was able to improve on the initial training and validation accuracy of the model (72.3%, 60.0%) to（95.0%, 93.6%).
+
+![Image of Training Plot](/images/training_plot.png)
+
 
 The trained neural network was able to accurately classify 93.6% of announcements in the validation set and it was able to accurately identify new announcements on the HKEx that I passed into it, provided that the categories of such announcements were within the training data. 
 

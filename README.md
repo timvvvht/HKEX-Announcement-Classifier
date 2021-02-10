@@ -1,6 +1,6 @@
 # HKEx Announcement Classifier
 
-HKEx Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to ~93-94% validation accuracy to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEx).
+HKEx Announcement Classifier is a project on data exploration, analysis and finally training a recurrent neural network (RNN) to ~93-94% validation accuracy to classify disclosure announcements submitted by listed companies on the Hong Kong Stock Exchange (HKEx). **Jan 2021 Update**: The transformer architecture is unreasonably effective - not only surpassing the validation accuracy of RNN, but also requiring far fewer parameters.
 
 <img src="/images/prediction.png" width="600">
 
@@ -70,18 +70,22 @@ Annual results occupy the number 1 spot in terms of length of announcement. This
 'Connected Transactions' and 'Notifiable Transactions' have the two highest mean word counts after annual results. This is due to these types of announcements often having to disclose the background of entering into such transactions at length.
 
 # Training a Recurrent Neural Network 
-I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can can be found <a href='HKEx_Announcement_Classifier.ipynb'>here</a>.
-
-The model architecture is as follows: 
-
-![Image of Model](/images/model.png)
+I implemented a recurrent neural network with a bidirectional LSTM layer after an embedding layer using pre-trained GloVe embeddings of 300 dimensions. The details of my implementation can be found <a href='HKEx_Announcement_Classifier.ipynb'>here</a>.
 
 Through fine-tuning hyperparameters of the model, I was able to improve on the initial training and validation accuracy of the model (72.3%, 60.0%) to（95.0%, 93.6%).
 
+# Training a Transformer 
+
+The transformer architecture was able to easily reach training accuracy of ~100% and validation accuracy of 95-96% with little fine-tuning. The implementation can be found <a href='Transformers - HKEX Annt Classifier.ipynb'>here</a>.
+
+## Comparison of RNN vs Transformer 
+### RNN 
 ![Image of Training Plot](/images/training_plot.png)
 
+### Transformer 
+![Image of Transformer Training](/images/transformers_performance.png)
 
-The trained neural network was able to accurately classify 93.6% of announcements in the validation set, and it was able to accurately identify new announcements on the HKEx passed into it, provided that the categories of such announcements were within the scope of the training data. 
+The recurrent neural network was able to accurately classify 93.6% of announcements in the validation set, and it was able to accurately identify new announcements on the HKEx passed into it, provided that the categories of such announcements were within the scope of the training data. 
 
 # Improving the Model 
 Further improvements on the model would include more data from different jurisdictions, and from different types of legal documents, so as to create a more general and more accurate legal text classifier.

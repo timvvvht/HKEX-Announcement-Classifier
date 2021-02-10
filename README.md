@@ -85,8 +85,6 @@ The transformer architecture was able to easily reach training accuracy of ~100%
 ### Transformer 
 ![Image of Transformer Training](/images/transformers_performance.png)
 
-The recurrent neural network was able to accurately classify 93.6% of announcements in the validation set, and it was able to accurately identify new announcements on the HKEx passed into it, provided that the categories of such announcements were within the scope of the training data. 
-
 # Improving the Model 
 Further improvements on the model would include more data from different jurisdictions, and from different types of legal documents, so as to create a more general and more accurate legal text classifier.
 
